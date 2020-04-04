@@ -1,4 +1,4 @@
-"""mysite URL Configuration
+"""mailpro URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from webapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('mail',views.sending_mail),
+    path('thanks/', views.thanks),
 ]
